@@ -97,17 +97,17 @@ if __name__ == "__main__":
     from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
     parser = ArgumentParser(formatter_class=ArgumentDefaultsHelpFormatter)
     parser.add_argument("--path", type=str, default='../images/mix', help='Path to images')
-
+    # search options
     parser.add_argument("--search", action="store_true", help='searching function')
     parser.add_argument("-c", "--color", type=str, default=None, help='searching color [赤、青、緑、黄、ピンク、紫]')
     parser.add_argument("-s", "--shape", type=str, default=None, help='searching shape [三角形、読ん角形、五角形、六角形、丸]')
     parser.add_argument("-o", "--object", type=str, default=None, help='searching object')
     parser.add_argument("-t", "--text", type=str, default=None, help='searching text')
-
+    
     parser.add_argument("-i", "--image", type=str, default=None, help='searching image')
     parser.add_argument("--deep", action="store_true", help='use deep feature in finding similar images')
     parser.add_argument("--show", type=int, default=10, help='number of images to show')
-
+    # sort options
     parser.add_argument("--sort", action="store_true", help='sorting function')
     parser.add_argument("-b", "--by", type=str, default=None, help='type to sort [color, shape, object, text]')
 
